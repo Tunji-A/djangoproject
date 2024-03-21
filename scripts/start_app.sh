@@ -1,9 +1,9 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["Your_Instance_Public_IP"]/' /home/ubuntu/Your_project_folder_name/mysite/settings.py
+sed -i 's/\[]/\["54.90.224.109"]/' /home/ubuntu/djangoproject/blog/settings.py
 
 python manage.py migrate 
-# python manage.py makemigrations     
+python manage.py makemigrations     
 python manage.py collectstatic
 sudo service gunicorn restart
 sudo service nginx restart
